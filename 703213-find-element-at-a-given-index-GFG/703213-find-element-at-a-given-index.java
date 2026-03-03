@@ -1,0 +1,10 @@
+// User function Template for Java
+class Solution {
+    public static int findElementAtIndex(int key, int[] arr) {
+        // code here
+        
+        int ans = arr[key];
+        
+        return ans;
+    }
+}

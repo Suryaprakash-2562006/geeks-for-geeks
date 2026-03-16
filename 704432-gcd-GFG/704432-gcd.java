@@ -1,18 +1,16 @@
-// User function Template for Java
 class Solution {
-    public static int gcd(int a, int b) {
-
-        // code here to calculate and return gcd of a and b
-        int gcd = 0;
+    public static int gcd(int A, int B) {
         
-        for(int i=1;i<=b;i++)
+        int gcd = 1;
+
+        for(int i = 1; i <= Math.min(A, B); i++)
         {
-            if(a%i==0 && b%i==0)
+            if(A % i == 0 && B % i == 0)
             {
                 gcd = i;
             }
         }
-        
+
         return gcd;
     }
 }

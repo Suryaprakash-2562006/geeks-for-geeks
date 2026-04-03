@@ -10,16 +10,28 @@ class Solution {
         // code here.
         
         int count = 0;
-        for(int i=0;i<arr1.length;i++){
-            for(int j=0;j<arr2.length;j++){
-                int add = arr1[i] + arr2[j];
-                if(add == x)
-                {
-                    count++;
-                }
+        
+        int i=0;
+        int j=arr2.length-1;
+        
+        while(i<arr1.length && j>=0 ){
+            int sum = arr1[i] + arr2[j];
+            
+            if(sum == x){
+                count++;
+                i++;
+                j--;
+            }
+            else if(sum > x){
+                j--;
+            }
+            else
+            {
+                i++;
             }
         }
         
         return count;
     }
 }
+
